@@ -37,13 +37,15 @@ public class Exerice17 {
         List<Integer> strings1 = strings.stream().map(x -> x.length()).collect(Collectors.toList());
 
         //Task 9
-        List<Integer> lista = Arrays.asList(10, 5, 12, -1, 17); // inte klar
-        lista.stream().sorted().collect(Collectors.toList());
+        List<Integer> lista = Arrays.asList(10, 5, 12, -1, 17); 
+        String so =  lista.stream().sorted().collect(Collectors.toList()).stream().map(x ->String.valueOf(x)).collect(Collectors.joining(" , "));
+        System.out.println(so);
+
 
         //task 10
         List<Integer> lis = Arrays.asList(10, 5, 12, -1, 17);
        System.out.println( lis.stream().collect(Collectors.averagingDouble(x->x)));
-       
+
 
     }
 
